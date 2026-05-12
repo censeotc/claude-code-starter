@@ -1,4 +1,5 @@
 course-modules/
 scripts/.env
+bot/.env
 __pycache__/
 *.pyc
