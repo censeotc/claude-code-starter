@@ -22,12 +22,15 @@ Run:
 """
 
 import asyncio
+import html as html_mod
 import logging
 import os
 import re
+import smtplib
 import sys
 import time
 from collections import defaultdict, deque
+from email.message import EmailMessage
 
 import anthropic
 from telegram import Update
@@ -72,6 +75,16 @@ TELEGRAM_BOT_TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 ALLOWED_USER_ID = int(os.environ.get("TELEGRAM_ALLOWED_USER_ID", "0") or "0")
 
 TELEGRAM_MAX_CHARS = 4000  # Hard limit is 4096; keep a small buffer
+
+# Email mirror config. If any of SMTP_USER/SMTP_PASS/EMAIL_TO are missing,
+# the email mirror is silently disabled and the bot still works in Telegram.
+SMTP_HOST = os.environ.get("SMTP_HOST", "smtp.gmail.com")
+SMTP_PORT = int(os.environ.get("SMTP_PORT", "587") or "587")
+SMTP_USER = os.environ.get("SMTP_USER", "").strip()
+SMTP_PASS = os.environ.get("SMTP_PASS", "").strip()
+EMAIL_FROM = os.environ.get("EMAIL_FROM", "").strip() or SMTP_USER
+EMAIL_TO = os.environ.get("EMAIL_TO", "").strip()
+EMAIL_ENABLED = bool(SMTP_USER and SMTP_PASS and EMAIL_TO)
 
 logging.basicConfig(
     level=logging.INFO,
@@ -127,6 +140,75 @@ def call_claude(messages: list[dict]) -> tuple[str, list[str]]:
                     seen_urls.add(url)
     answer = "\n".join(text_parts).strip()
     return answer or "(no answer returned)", sources
+
+
+# ----- Email mirror -----
+
+def _email_subject(question: str) -> str:
+    q = re.sub(r"\s+", " ", question).strip()
+    return f"[Anthropic Bot] {q[:90]}{'...' if len(q) > 90 else ''}"
+
+
+def _esc(s: str) -> str:
+    return html_mod.escape(s or "", quote=True)
+
+
+def _render_email_html(question: str, answer: str, sources: list[str]) -> str:
+    # Convert paragraphs to <p>, keep bullet-like lines intact.
+    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", answer) if p.strip()]
+    body_blocks = []
+    for p in paragraphs:
+        if all(line.lstrip().startswith(("-", "*", "•")) for line in p.splitlines() if line.strip()):
+            items = "".join(
+                f"<li>{_esc(line.lstrip(' -*•'))}</li>"
+                for line in p.splitlines() if line.strip()
+            )
+            body_blocks.append(f"<ul style='margin:0 0 12px 18px;padding:0;'>{items}</ul>")
+        else:
+            body_blocks.append(
+                f"<p style='margin:0 0 12px 0;line-height:1.55;'>{_esc(p)}</p>"
+            )
+    source_list = "".join(
+        f"<li><a href='{_esc(u)}' style='color:#0f62fe;text-decoration:none;'>{_esc(u)}</a></li>"
+        for u in sources
+    ) or "<li style='color:#6f6f6f;'>(no sources cited)</li>"
+    return (
+        "<!DOCTYPE html><html><head><meta charset='utf-8'></head>"
+        "<body style='margin:0;padding:24px;background:#f4f4f4;"
+        "font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif;"
+        "color:#161616;'>"
+        "<div style='max-width:680px;margin:0 auto;background:#ffffff;border-radius:8px;"
+        "padding:28px;box-shadow:0 1px 3px rgba(0,0,0,0.08);'>"
+        "<div style='font-size:11px;color:#6f6f6f;text-transform:uppercase;letter-spacing:0.05em;"
+        "margin-bottom:6px;'>Anthropic Bot &middot; Telegram Q&amp;A</div>"
+        f"<h1 style='font-size:18px;margin:0 0 18px 0;color:#161616;line-height:1.4;'>{_esc(question)}</h1>"
+        f"<div style='font-size:14px;color:#161616;'>{''.join(body_blocks)}</div>"
+        "<div style='margin-top:20px;padding-top:14px;border-top:1px solid #e0e0e0;'>"
+        "<div style='font-size:11px;color:#6f6f6f;text-transform:uppercase;letter-spacing:0.05em;"
+        "margin-bottom:6px;'>Sources</div>"
+        f"<ul style='margin:0;padding:0 0 0 18px;font-size:13px;'>{source_list}</ul>"
+        "</div></div></body></html>"
+    )
+
+
+def _render_email_text(question: str, answer: str, sources: list[str]) -> str:
+    src = "\n".join(f"- {u}" for u in sources) if sources else "(no sources cited)"
+    return f"Q: {question}\n\n{answer}\n\nSources:\n{src}\n"
+
+
+def send_email_mirror(question: str, answer: str, sources: list[str]) -> None:
+    if not EMAIL_ENABLED:
+        return
+    msg = EmailMessage()
+    msg["Subject"] = _email_subject(question)
+    msg["From"] = EMAIL_FROM
+    msg["To"] = EMAIL_TO
+    msg.set_content(_render_email_text(question, answer, sources))
+    msg.add_alternative(_render_email_html(question, answer, sources), subtype="html")
+    with smtplib.SMTP(SMTP_HOST, SMTP_PORT, timeout=30) as s:
+        s.starttls()
+        s.login(SMTP_USER, SMTP_PASS)
+        s.send_message(msg)
 
 
 # ----- Telegram handlers -----
@@ -235,6 +317,16 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
                 chunk,
                 disable_web_page_preview=True,
             )
+
+        # Mirror to email (non-blocking on failure)
+        if EMAIL_ENABLED:
+            try:
+                await loop.run_in_executor(
+                    None, send_email_mirror, question, answer, sources
+                )
+                log.info("emailed Q&A to %s", EMAIL_TO)
+            except Exception:
+                log.exception("email mirror failed (continuing)")
     finally:
         in_flight.discard(chat_id)
 
@@ -250,7 +342,11 @@ def main():
     if missing:
         sys.exit(f"Missing required env vars: {', '.join(missing)}")
 
-    log.info("Starting bot for user_id=%s, model=%s", ALLOWED_USER_ID, MODEL)
+    log.info(
+        "Starting bot for user_id=%s, model=%s, email_mirror=%s",
+        ALLOWED_USER_ID, MODEL,
+        f"on (to={EMAIL_TO})" if EMAIL_ENABLED else "off",
+    )
     app = Application.builder().token(TELEGRAM_BOT_TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("help", start))

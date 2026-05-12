@@ -2,7 +2,7 @@
 # After editing, deploy with: fly deploy --config bot/fly.toml --dockerfile bot/Dockerfile
 
 # Replace "anthropic-source-bot" with a globally-unique app name during `fly launch`.
-app = "anthropic-source-bot"
+app = "anthropic-source-bot-scottw"
 primary_region = "iad"
 
 [build]

@@ -16,6 +16,8 @@ Bot (Fly.io, always-on)
 Answer + citation URLs
 ```
 
+Optionally, each Q&A is also mirrored to your email inbox (HTML format with sources) — see "Email mirror" below.
+
 ## What you'll need (~30 minutes total)
 
 1. A Telegram account
@@ -94,6 +96,19 @@ fly secrets list --config bot/fly.toml
 ```
 
 You should see all three secret names (values are hidden).
+
+### Email mirror (optional, but recommended)
+
+If you also want every Q&A delivered to your inbox in HTML, add three more secrets — the same Gmail App Password values you used for the watcher:
+
+```powershell
+fly secrets set --config bot/fly.toml `
+  SMTP_USER="scott@censeoai.ai" `
+  SMTP_PASS="your-16-char-google-app-password" `
+  EMAIL_TO="scott@censeoai.ai"
+```
+
+If any of those three is missing, the email mirror silently disables itself and the bot still works in Telegram. If SMTP fails at send time, the bot logs a warning and still replies in Telegram.
 
 ## Step 7 — Deploy (~5 min)
 
