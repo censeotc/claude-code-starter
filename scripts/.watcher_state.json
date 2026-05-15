@@ -2,7 +2,7 @@
   "alerted_entries": {},
   "page_hashes": {
     "https://docs.claude.com/en/release-notes/api": "5807685905483164f7c4511348a9f27bf0d561fe8a6da57738694c40de7a0436",
-    "https://docs.claude.com/en/release-notes/claude-apps": "930ef123f1b59372f7271d1922b71b92dcc4c548e041f554afbf06580f59f63d"
+    "https://docs.claude.com/en/release-notes/claude-apps": "6ac2045543ec0ca2f5ae123780fe7c6535b2e61aab0c617247ec078d535547a7"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -202,6 +202,7 @@
     "https://www.anthropic.com/news/prompt-engineering-for-business-performance": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/prompting-long-context": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/protecting-well-being-of-users": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/pwc-expanded-partnership": "2026-05-15T02:12:09.600159+00:00",
     "https://www.anthropic.com/news/rahul-patil-joins-anthropic": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/reed-hastings": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/reflections-on-our-responsible-scaling-policy": "2026-05-12T17:17:13.057300+00:00",
