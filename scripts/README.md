@@ -52,6 +52,11 @@ Each brief is also archived to `briefs/<date>.html` with an index page, so you c
 
 The Claude App Release Notes page sits behind Cloudflare and may 403 from cloud runners. The script logs a warning and keeps going.
 
+**How the docs pages are handled** — These pages don't publish RSS, so the watcher hashes their content to detect changes. When a change is detected:
+
+- If `ANTHROPIC_API_KEY` is set, the page text is sent to Claude, which extracts structured release entries (title, date, summary, bullets). Each entry becomes a normal item in the brief — categorized, dated, deduped against previously-seen entries, and eligible for magnitude tags and deep summaries.
+- If no API key is set (or extraction fails), the brief falls back to a generic "Page updated" line.
+
 ---
 
 ## Setup: GitHub Actions (recommended)

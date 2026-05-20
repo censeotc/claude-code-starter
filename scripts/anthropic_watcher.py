@@ -210,32 +210,7 @@ def collect_feed_items(state):
     return window_items, new_items
 
 
-def collect_page_changes(state):
-    if not cfg.SOURCE_TOGGLES.get("Docs", True):
-        return []
-    hashes = state.setdefault("page_hashes", {})
-    out = []
-    now = datetime.now(timezone.utc)
-    for name, url in WATCH_PAGES:
-        try:
-            raw = fetch(url).decode("utf-8", errors="replace")
-        except Exception as e:
-            print(f"[warn] page {name}: {e}", file=sys.stderr)
-            continue
-        digest = hashlib.sha256(normalize_html(raw).encode("utf-8")).hexdigest()
-        prev = hashes.get(url)
-        if prev and prev != digest:
-            out.append({
-                "source":    "Docs",
-                "title":     f"{name} updated",
-                "link":      url,
-                "published": now.isoformat(),
-                "dt":        now,
-                "summary":   "Page content changed since last check.",
-                "id":        f"page::{url}::{digest}",
-            })
-        hashes[url] = digest
-    return out
+# collect_page_changes is defined below, after the LLM helpers it uses.
 
 
 # ----- LLM helpers -----
@@ -347,6 +322,97 @@ def weekly_themes(items_7d):
         "Items:\n" + _items_to_bullets(items_7d, limit=80)
     )
     return _extract_json(llm_call(prompt, max_tokens=1800))
+
+
+# ----- Docs-page extraction -----
+
+def _normalize_title(t):
+    return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", "", (t or "").lower())).strip()
+
+
+def extract_docs_entries(name, url, raw_html):
+    """LLM-extract structured release entries from a docs page. Returns list
+    of entry dicts or None if LLM unavailable / failed."""
+    text = normalize_html(raw_html)
+    if not text:
+        return None
+    text = text[:50000]  # keep prompt size bounded
+    cutoff_date = (datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
+    prompt = (
+        f"Below is the text of the '{name}' documentation page. Extract the "
+        f"release-note entries dated on or after {cutoff_date}. If a date is "
+        "not visible, include the entry only if it appears in the most recent "
+        "section (up to 10 entries total). Ignore navigation, footers, and "
+        "marketing copy.\n\n"
+        "Return strict JSON only, no prose outside:\n"
+        '{"entries": [{"title": "...", "date": "YYYY-MM-DD or null", '
+        '"summary": "1-2 sentences", "bullets": ["...", "..."]}]}\n\n'
+        f"Page text:\n{text}"
+    )
+    raw = llm_call(prompt, max_tokens=2500)
+    parsed = _extract_json(raw)
+    if not parsed:
+        return None
+    return parsed.get("entries", []) or []
+
+
+def collect_page_changes(state):
+    """When a watched page's content hash changes, LLM-extract structured
+    entries from it. Falls back to a generic 'page updated' item if no API
+    key or extraction fails."""
+    if not cfg.SOURCE_TOGGLES.get("Docs", True):
+        return []
+    hashes = state.setdefault("page_hashes", {})
+    out = []
+    now = datetime.now(timezone.utc)
+    cutoff = now - timedelta(days=LOOKBACK_DAYS)
+    for name, url in WATCH_PAGES:
+        try:
+            raw_html = fetch(url).decode("utf-8", errors="replace")
+        except Exception as e:
+            print(f"[warn] page {name}: {e}", file=sys.stderr)
+            continue
+        digest = hashlib.sha256(normalize_html(raw_html).encode("utf-8")).hexdigest()
+        prev = hashes.get(url)
+        if prev and prev != digest:
+            entries = extract_docs_entries(name, url, raw_html)
+            if entries:
+                for entry in entries:
+                    title = (entry.get("title") or "").strip() or f"{name} update"
+                    date_str = entry.get("date") or ""
+                    try:
+                        dt = datetime.strptime(date_str, "%Y-%m-%d").replace(tzinfo=timezone.utc) if date_str else now
+                    except ValueError:
+                        dt = now
+                    if dt < cutoff:
+                        continue
+                    bullets = entry.get("bullets") or []
+                    summary = (entry.get("summary") or "").strip()
+                    if bullets:
+                        summary = (summary + " | " if summary else "") + " | ".join(b for b in bullets if b)
+                    item_id = f"docs::{url}::{_normalize_title(title)}::{date_str or 'undated'}"
+                    out.append({
+                        "source":    "Docs",
+                        "title":     f"[{name}] {title}",
+                        "link":      url,
+                        "published": dt.isoformat(),
+                        "dt":        dt,
+                        "summary":   summary[:500],
+                        "id":        item_id,
+                    })
+            else:
+                # No API key or extraction failed — keep the legacy nudge.
+                out.append({
+                    "source":    "Docs",
+                    "title":     f"{name} updated",
+                    "link":      url,
+                    "published": now.isoformat(),
+                    "dt":        now,
+                    "summary":   "Page content changed since last check. (Set ANTHROPIC_API_KEY to get structured entries.)",
+                    "id":        f"page::{url}::{digest}",
+                })
+        hashes[url] = digest
+    return out
 
 
 # ----- Saved-search alerts -----
