@@ -54,6 +54,7 @@ FEEDS = [
 ]
 WATCH_PAGES = [
     ("Claude API Release Notes", "https://docs.claude.com/en/release-notes/api.md"),
+    ("Claude Code Changelog",    "https://code.claude.com/docs/en/changelog.md"),
 ]
 # Claude Apps release notes are served from an Intercom-hosted page that blocks
 # our GitHub Actions runner (bot challenge on datacenter IPs). Until an RSS
@@ -341,10 +342,13 @@ def _normalize_title(t):
     return re.sub(r"\s+", " ", re.sub(r"[^\w\s]", "", (t or "").lower())).strip()
 
 
-def extract_docs_entries(name, url, raw_html):
+def extract_docs_entries(name, url, raw):
     """LLM-extract structured release entries from a docs page. Returns list
     of entry dicts or None if LLM unavailable / failed."""
-    text = normalize_html(raw_html)
+    # Markdown sources (.md endpoints) are sent to the LLM verbatim. Stripping
+    # tags would also strip MDX component attributes like <Update label="..."
+    # description="..."> which carry the version and date.
+    text = raw.strip() if url.lower().endswith(".md") else normalize_html(raw)
     if not text:
         return None
     text = text[:50000]  # keep prompt size bounded
@@ -383,7 +387,8 @@ def collect_page_changes(state):
         except Exception as e:
             print(f"[warn] page {name}: {e}", file=sys.stderr)
             continue
-        digest = hashlib.sha256(normalize_html(raw_html).encode("utf-8")).hexdigest()
+        hash_input = raw_html if url.lower().endswith(".md") else normalize_html(raw_html)
+        digest = hashlib.sha256(hash_input.encode("utf-8")).hexdigest()
         prev = hashes.get(url)
         if prev and prev != digest:
             entries = extract_docs_entries(name, url, raw_html)
