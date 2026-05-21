@@ -53,9 +53,12 @@ FEEDS = [
     ("Code Releases", "https://github.com/anthropics/claude-code/releases.atom"),
 ]
 WATCH_PAGES = [
-    ("Claude API Release Notes", "https://docs.claude.com/en/release-notes/api"),
-    ("Claude App Release Notes", "https://docs.claude.com/en/release-notes/claude-apps"),
+    ("Claude API Release Notes", "https://docs.claude.com/en/release-notes/api.md"),
 ]
+# Claude Apps release notes are served from an Intercom-hosted page that blocks
+# our GitHub Actions runner (bot challenge on datacenter IPs). Until an RSS
+# mirror exists, surface a manual-check link in every brief instead.
+CLAUDE_APPS_RELEASE_NOTES_URL = "https://docs.claude.com/en/release-notes/claude-apps"
 
 SECTION_ORDER = ["News", "Research", "Engineering", "Code Releases", "Docs"]
 SECTION_COLORS = {
@@ -576,7 +579,14 @@ def render_daily_html(date_str, window_items, new_items, analysis, force_daily):
         p.append("</ul>")
 
     p.append(
-        '<div style="margin-top:28px;padding-top:16px;border-top:1px solid #e0e0e0;'
+        '<div style="margin-top:24px;padding:12px 14px;background:#fafafa;border:1px solid #e0e0e0;'
+        'border-radius:4px;font-size:12px;color:#525252;line-height:1.5;">'
+        f'Manually check Claude Apps release notes: '
+        f'<a href="{esc(CLAUDE_APPS_RELEASE_NOTES_URL)}" style="color:#0f62fe;">'
+        f'{esc(CLAUDE_APPS_RELEASE_NOTES_URL)}</a></div>'
+    )
+    p.append(
+        '<div style="margin-top:16px;padding-top:16px;border-top:1px solid #e0e0e0;'
         'font-size:11px;color:#a8a8a8;text-align:center;">'
         '&#9733; flagged as important &middot; blue dot indicates new since last brief &middot; '
         'magnitude tags via LLM</div>'
@@ -618,6 +628,7 @@ def render_daily_text(date_str, window_items, new_items, analysis, force_daily):
                 lines.append(f"        Why it matters: {deep}")
             if overview:
                 lines.append(f"        Overview:       {overview}")
+    lines += ["", f"Manually check Claude Apps release notes: {CLAUDE_APPS_RELEASE_NOTES_URL}"]
     return "\n".join(lines)
 
 
