@@ -2,7 +2,7 @@
   "alerted_entries": {},
   "page_hashes": {
     "https://docs.claude.com/en/release-notes/api": "a2f5ed28b1385d20085fc09a7a5aea153a86fd1c338b982570f638fa2121bfd4",
-    "https://docs.claude.com/en/release-notes/claude-apps": "d68bbacf1810059fd3e533c6bcf2727c0aef61f5bea6e8cfa88d49341e494cab"
+    "https://docs.claude.com/en/release-notes/claude-apps": "4060f1bcbf72064ec6b17b85742080eceb1bbf93d2f86567a804242c96f96e15"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -220,6 +220,7 @@
     "https://www.anthropic.com/news/salesforce-partnership": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/securing-america-s-compute-advantage-anthropic-s-position-on-the-diffusion-rule": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/seoul-becomes-third-anthropic-office-in-asia-pacific": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/series-h": "2026-05-28T20:14:46.277102+00:00",
     "https://www.anthropic.com/news/servicenow-anthropic-claude": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/skt-partnership-announcement": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/snowflake-anthropic-expanded-partnership": "2026-05-12T17:17:13.057300+00:00",
@@ -288,6 +289,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.149": "2026-05-22T23:02:56.251572+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.150": "2026-05-23T05:59:32.545336+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.152": "2026-05-27T02:33:53.499165+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.153": "2026-05-28T02:09:43.581004+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.153": "2026-05-28T02:09:43.581004+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.154": "2026-05-28T20:14:46.277102+00:00"
   }
 }
