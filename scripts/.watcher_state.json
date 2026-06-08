@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "f68c2390e78d3d630abb9325f600d0c180a583a395f56851193f4344efb740b0",
+    "https://docs.claude.com/en/release-notes/api": "9cdaf97f16eb60d0b9bf9aa247e41752f01242ba762775c3f9b62734805f9650",
     "https://docs.claude.com/en/release-notes/claude-apps": "f5195ca5fb6013d6af7b8b3a1f902f8918324000d09f99fc8100f6ac9b6c63a3"
   },
   "seen_entries": {
@@ -256,6 +256,7 @@
     "https://www.anthropic.com/research/2028-ai-leadership": "2026-05-14T18:29:23.403353+00:00",
     "https://www.anthropic.com/research/81k-economics": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/Evaluating-Claude-For-Bioinformatics-With-BioMysteryBench": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/research/agents-in-biology": "2026-06-08T20:01:39.493633+00:00",
     "https://www.anthropic.com/research/anthropic-institute-agenda": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/automated-alignment-researchers": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/claude-personal-guidance": "2026-05-12T17:17:13.057300+00:00",
