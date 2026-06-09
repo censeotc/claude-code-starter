@@ -1,8 +1,8 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "e242ee230736e0c0b0cd2ba1c8b240ca2e610315150542f654f28c6158d4fc30",
-    "https://docs.claude.com/en/release-notes/claude-apps": "f5195ca5fb6013d6af7b8b3a1f902f8918324000d09f99fc8100f6ac9b6c63a3"
+    "https://docs.claude.com/en/release-notes/api": "0373ca39d03e2e7c92ff92e900910449c5c677a24d2daea361f7d89c6f58accd",
+    "https://docs.claude.com/en/release-notes/claude-apps": "c10742493945245c4678dce9deb232284b56e782de21691f6fc93fd769471860"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -107,6 +107,7 @@
     "https://www.anthropic.com/news/claude-code-security": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/claude-design-anthropic-labs": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/claude-europe": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/claude-fable-5-mythos-5": "2026-06-09T19:07:59.890944+00:00",
     "https://www.anthropic.com/news/claude-for-creative-work": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/claude-for-financial-services": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/claude-for-life-sciences": "2026-05-12T17:17:13.057300+00:00",
@@ -309,6 +310,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.166": "2026-06-06T03:40:52.951096+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.167": "2026-06-06T03:40:52.951096+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.168": "2026-06-07T00:06:02.350111+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.169": "2026-06-08T22:18:49.152294+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.169": "2026-06-08T22:18:49.152294+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.170": "2026-06-09T19:07:59.890944+00:00"
   }
 }
