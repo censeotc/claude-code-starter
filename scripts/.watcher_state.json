@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "0c1ff543e85420b1044a289a838edef8bc44c7498d835c7d4c364d17d5b50823",
+    "https://docs.claude.com/en/release-notes/api": "c61c0bd86cccda1eba190b4e4f3ad8c57bb7d68a79ad27e011658c456db4bdd3",
     "https://docs.claude.com/en/release-notes/claude-apps": "ba100188638b2931b33d21c401ef0ad014aea3499c3df65caac7cb07d9e2b9a3"
   },
   "seen_entries": {
@@ -146,6 +146,7 @@
     "https://www.anthropic.com/news/disrupting-AI-espionage": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/donate-public-first-action": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-11T21:12:48.334199+00:00",
     "https://www.anthropic.com/news/economic-futures-uk-europe": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/election-safeguards-update": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/elections-ai-2024": "2026-05-12T17:17:13.057300+00:00",
