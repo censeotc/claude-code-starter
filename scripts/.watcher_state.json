@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "ad54a287adc4a1ec88f3df1543b97e3b9eae4d9465a2940643602353c6f009b9",
+    "https://docs.claude.com/en/release-notes/api": "c515d6909f24a52eff32f6cae983669e589713769b642cc8ce6c5e0034d283a5",
     "https://docs.claude.com/en/release-notes/claude-apps": "ba100188638b2931b33d21c401ef0ad014aea3499c3df65caac7cb07d9e2b9a3"
   },
   "seen_entries": {
@@ -71,6 +71,7 @@
     "https://www.anthropic.com/news/anthropic-partners-with-menlo-ventures-to-launch-anthology-fund": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-partners-with-the-university-of-chicago-s-becker-friedman-institute-on-ai-economic": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-partners-with-u-s-national-labs-for-first-1-000-scientist-ai-jam": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/anthropic-public-record": "2026-06-12T17:31:58.558984+00:00",
     "https://www.anthropic.com/news/anthropic-raises-124-million-to-build-more-reliable-general-ai-systems": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-raises-series-b-to-build-safe-reliable-ai": "2026-05-12T17:17:13.057300+00:00",
