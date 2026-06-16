@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "086b29253e72e25599248498acd0bf901299d7f2be10c6baace5504d675aa7b9",
+    "https://docs.claude.com/en/release-notes/api": "8c71cd782d234b7d801d8386144c35811031910c28171264a84a9334a5293e75",
     "https://docs.claude.com/en/release-notes/claude-apps": "ee8b37d2c63cf324fca089bc41807c194e3bc764c4be1ea9f650afef6e87c2ee"
   },
   "seen_entries": {
@@ -265,6 +265,7 @@
     "https://www.anthropic.com/research/agents-in-biology": "2026-06-08T20:01:39.493633+00:00",
     "https://www.anthropic.com/research/anthropic-institute-agenda": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/automated-alignment-researchers": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/research/claude-code-expertise": "2026-06-16T20:39:25.479612+00:00",
     "https://www.anthropic.com/research/claude-personal-guidance": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/coding-agents-social-sciences": "2026-05-27T23:54:24.867169+00:00",
     "https://www.anthropic.com/research/donating-open-source-petri": "2026-05-12T17:17:13.057300+00:00",
@@ -323,6 +324,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.175": "2026-06-12T07:13:50.077922+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.176": "2026-06-12T23:07:40.471426+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.177": "2026-06-13T02:31:23.565222+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.178": "2026-06-15T22:56:18.119428+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.178": "2026-06-15T22:56:18.119428+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.179": "2026-06-16T20:39:25.479612+00:00"
   }
 }
