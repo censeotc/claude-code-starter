@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "1aa14c264554062daa70a56beac501504334bdf25df95f42e99fe77a5fb23fb2",
+    "https://docs.claude.com/en/release-notes/api": "7c99c728c41617d761e5aa73f8072ba3051b7019a9e180986f1b0b6ac9a30ae1",
     "https://docs.claude.com/en/release-notes/claude-apps": "ee8b37d2c63cf324fca089bc41807c194e3bc764c4be1ea9f650afef6e87c2ee"
   },
   "seen_entries": {
@@ -277,10 +277,12 @@
     "https://www.anthropic.com/research/making-claude-a-chemist": "2026-06-05T20:45:26.395081+00:00",
     "https://www.anthropic.com/research/n-days": "2026-06-17T17:45:09.414856+00:00",
     "https://www.anthropic.com/research/natural-language-autoencoders": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/research/project-fetch-phase-two": "2026-06-18T19:16:26.728109+00:00",
     "https://www.anthropic.com/research/project-vend-2": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/teaching-claude-why": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/team/alignment": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/team/economic-research": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/research/team/frontier-red-team": "2026-06-18T19:16:26.728109+00:00",
     "https://www.anthropic.com/research/team/interpretability": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/team/societal-impacts": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/trustworthy-agents": "2026-05-12T17:17:13.057300+00:00",
