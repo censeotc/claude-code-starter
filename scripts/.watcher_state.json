@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "0b431436d8ced840e8fbaf93683673e2d55f3bcaefc086becc82e77fe9b32fdb",
+    "https://docs.claude.com/en/release-notes/api": "6e2fa2ca256052909b1c79960e7e5ca662016b66f36c5abf4fa3240aec039834",
     "https://docs.claude.com/en/release-notes/claude-apps": "0152825b3b9a4e5a54684200d0be8bceb4b4fd3dcd66f6f13f6fefbafba0394e"
   },
   "seen_entries": {
@@ -266,6 +266,7 @@
     "https://www.anthropic.com/news/updating-restrictions-of-sales-to-unsupported-regions": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/us-elections-readiness": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/usage-policy-update": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/ust-claude": "2026-07-10T02:50:13.678010+00:00",
     "https://www.anthropic.com/news/visible-extended-thinking": "2026-07-03T12:00:13.777892+00:00",
     "https://www.anthropic.com/news/where-stand-department-war": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/widening-conversation-ai": "2026-05-19T23:54:59.383721+00:00",
@@ -363,6 +364,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.202": "2026-07-06T23:58:41.221692+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.203": "2026-07-07T22:04:55.406279+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.204": "2026-07-08T01:48:23.823321+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.205": "2026-07-08T22:01:27.680960+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.205": "2026-07-08T22:01:27.680960+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.206": "2026-07-10T02:50:13.678010+00:00"
   }
 }
