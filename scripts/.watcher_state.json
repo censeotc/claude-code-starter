@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "fe510d7469c9c420301822803bb1a1b53d64942a39174580b81ea2078301ff37",
+    "https://docs.claude.com/en/release-notes/api": "864d2a151a05f899af6376a075e2fc6943ac67e6de8ef515c4e06a1a57ce0172",
     "https://docs.claude.com/en/release-notes/claude-apps": "8bb46453c2ba4e87c955796c0100abfd2eac6b1a4c977130c2bec53966bbcb32"
   },
   "seen_entries": {
@@ -281,6 +281,7 @@
     "https://www.anthropic.com/research/claude-code-expertise": "2026-06-16T20:39:25.479612+00:00",
     "https://www.anthropic.com/research/claude-personal-guidance": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/claude-plays-robotics": "2026-07-13T17:06:50.454221+00:00",
+    "https://www.anthropic.com/research/claude-values-models-languages": "2026-07-13T19:12:18.994029+00:00",
     "https://www.anthropic.com/research/coding-agents-social-sciences": "2026-05-27T23:54:24.867169+00:00",
     "https://www.anthropic.com/research/donating-open-source-petri": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/economic-index-june-2026-report": "2026-06-26T16:07:15.481240+00:00",
