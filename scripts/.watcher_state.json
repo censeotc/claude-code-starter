@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "71f3de12d079b4eccfca1b37d48a7de1f848e855b096a2b0a13c5f8d013eb732",
+    "https://docs.claude.com/en/release-notes/api": "5dd0bc2b882abf7c1acb57e4129e552d79a732eab9239ac369e5055f411f7c8d",
     "https://docs.claude.com/en/release-notes/claude-apps": "da3f1f437d107c7c863de1f8ed1394dd8dd37b4779dc1ee5652d82b3181f8e77"
   },
   "seen_entries": {
@@ -228,6 +228,7 @@
     "https://www.anthropic.com/news/protecting-well-being-of-users": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/pwc-expanded-partnership": "2026-05-15T02:12:09.600159+00:00",
     "https://www.anthropic.com/news/rahul-patil-joins-anthropic": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/rare-disease-research-grants": "2026-07-20T19:25:21.330457+00:00",
     "https://www.anthropic.com/news/redeploying-fable-5": "2026-07-01T08:03:36.205810+00:00",
     "https://www.anthropic.com/news/reed-hastings": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/reflect-with-claude": "2026-07-09T13:43:15.253478+00:00",
