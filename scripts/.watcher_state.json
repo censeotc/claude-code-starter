@@ -1,8 +1,8 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "0d259c97178a017c65fec3e71c78e3614635203a5565621d8557d3d6eac06fdf",
-    "https://docs.claude.com/en/release-notes/claude-apps": "657b9cf277b1ff977d886811e004730f0f3c9948d1be5ffa997ed984751886eb"
+    "https://docs.claude.com/en/release-notes/api": "5a601ddfece98c89b6d322e34aef4d0cbbf1ec7f6f80c0cbaa04651340a2a39e",
+    "https://docs.claude.com/en/release-notes/claude-apps": "5dcdde1b7dadb0d3dc7cbc93639186c1f5ba8f2cafc6845cbb92b3eba7490a35"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -57,6 +57,7 @@
     "https://www.anthropic.com/news/anthropic-appoints-irina-ghose-as-managing-director-of-india": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-bcg": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-codepath-partnership": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-22T18:02:01.552413+00:00",
     "https://www.anthropic.com/news/anthropic-economic-index-insights-from-claude-sonnet-3-7": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-education-report-how-educators-use-claude": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-education-report-how-university-students-use-claude": "2026-05-12T17:17:13.057300+00:00",
@@ -155,6 +156,7 @@
     "https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/donation-public-first-action": "2026-07-22T10:15:10.205231+00:00",
     "https://www.anthropic.com/news/dxc-anthropic-alliance": "2026-06-11T21:12:48.334199+00:00",
+    "https://www.anthropic.com/news/economic-futures-research-fund-agenda": "2026-07-22T18:02:01.552413+00:00",
     "https://www.anthropic.com/news/economic-futures-uk-europe": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/election-safeguards-update": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/elections-ai-2024": "2026-05-12T17:17:13.057300+00:00",
