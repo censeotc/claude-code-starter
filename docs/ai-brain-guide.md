@@ -28,7 +28,7 @@ The daily interface is the Claude desktop app or Claude Code; the knowledge laye
 ## Prerequisites
 
 - **Claude subscription** (~$20/month Pro)
-- **Claude Code** installed (`npm install -g @anthropic/claude-code`) — see the [root README](../README.md) setup guide. The Claude desktop app also works for daily use; Claude Code is best for the build.
+- **Claude Code** installed (`npm install -g @anthropic-ai/claude-code`) — see the [root README](../README.md) setup guide. The Claude desktop app also works for daily use; Claude Code is best for the build.
 - **Obsidian** (free, [obsidian.md](https://obsidian.md)) — optional but recommended. It's just a nice viewer/editor for the markdown vault you're about to create.
 - **Node.js** installed (for MCP servers) — see Module 2.
 
@@ -136,6 +136,8 @@ That's the whole "brain that remembers" feature. (If you outgrow it, [docs/resou
 
 The product's "connects to email, calendar, and the apps you already run" is MCP — the same setup as Assignment 2b, pointed at Google instead of a browser.
 
+> **Check what you already have first.** If you use the Claude desktop app or claude.ai, many connections are one click away as **Connectors** (Settings → Connectors): Gmail, Google Calendar, Google Drive, Outlook/Microsoft 365, Airtable, Canva, and more. And if you've been using Claude for a while, some may already be connected — ask Claude *"List the MCP tools available to you"* before installing anything. Only fall back to the terminal commands below for servers that aren't offered as Connectors. **On Outlook instead of Gmail?** Connect Microsoft 365 — every email/calendar skill in this guide works the same; only the tool names differ.
+
 With Claude Code **not** running:
 
 ```bash
@@ -163,6 +165,8 @@ without showing me the draft and getting my explicit OK first.
 ```
 
 The product makes the same promise ("never sends without you"). With MCP it's one line of context, not a feature you pay for.
+
+**Make it enforced, not just promised.** A `CLAUDE.md` rule is an instruction Claude follows; a permission rule is one the harness enforces. In Claude Code, run `/permissions` and set any send/create/delete tool (send email, create calendar event) to **ask** — then every outbound action requires your click, no matter what the prompt says. Belt and suspenders: keep both.
 
 **Troubleshooting:** MCP servers load at startup only — fully restart Claude after adding one. If a server won't connect, check `~/.claude/settings.json` is valid JSON (Module 2 troubleshooting section).
 
@@ -210,6 +214,16 @@ Repeat for each row, or paste the whole table and ask Claude to generate all 15.
 
 You already have working examples to crib from in this repo: [prd-generator](../module-1/.claude/skills/prd-generator/SKILL.md) (interview-then-generate pattern), [youtube-researcher](../module-2/.claude/skills/youtube-researcher/SKILL.md) (MCP-powered skill).
 
+### Ready-made starters
+
+Nine of the highest-value skills are pre-built in [docs/ai-brain-skills/](ai-brain-skills/) — copy any folder into your vault's `.claude/skills/` and edit the specifics (your CRM base, your inbox, your folders):
+
+- **Daily operations:** [inbox-triage](ai-brain-skills/inbox-triage/SKILL.md), [meeting-prep](ai-brain-skills/meeting-prep/SKILL.md), [follow-up](ai-brain-skills/follow-up/SKILL.md), [braindump](ai-brain-skills/braindump/SKILL.md)
+- **Client work:** [client-brief](ai-brain-skills/client-brief/SKILL.md), [deal-prep](ai-brain-skills/deal-prep/SKILL.md), [client-report](ai-brain-skills/client-report/SKILL.md), [aeo-snapshot](ai-brain-skills/aeo-snapshot/SKILL.md)
+- **Process:** [sop-writer](ai-brain-skills/sop-writer/SKILL.md)
+
+Each one states which connections it uses and degrades gracefully when one is missing.
+
 ---
 
 ## Step 6: Hire the 8 AI employees (Module 3 practice)
@@ -237,9 +251,7 @@ name: email-manager
 description: Process the inbox, categorize messages, and draft replies in
   the operator's voice. Use when asked to check email, triage the inbox,
   or draft a reply.
-model: claude-sonnet-4-6
-tools:
-  - Read
+model: claude-sonnet-5
 ---
 
 You are the operator's email manager.
@@ -256,8 +268,13 @@ demands more. Present it for approval. NEVER send anything yourself.
 
 Build the rest the same way, or paste the table above and ask Claude to generate all 8, then edit the descriptions until delegation triggers reliably.
 
+Two frontmatter notes:
+- **`tools`:** omitting the field (as above) lets the agent use every tool you've connected — the right default for an email manager that needs your email MCP. List specific tools only to *restrict* an agent (e.g. give `content-writer` just `Read` so it can never touch email). An agent whose tool list doesn't include the tools its job needs will silently fail at that job.
+- **`model`:** model names change over time — check the current list with `/model` before hardcoding, or omit the field entirely to inherit whatever model your session runs. Omitting is the low-maintenance default.
+
 **Module 3 best practices that make this work:**
 - The `description` field is the trigger. "Use when asked to check email, triage the inbox, or draft a reply" delegates reliably; "handles email" doesn't.
+- **One owner per job.** If `/email-draft` (a skill) and `email-manager` (an agent) both exist, keep the actual drafting instructions in ONE place — the skill — and have the agent's file say "follow .claude/skills/email-draft/SKILL.md for drafts." Duplicate instructions drift apart and you'll get different drafts depending on which one fired.
 - **Pipelines need no plumbing** — you're the handoff point. One prompt runs a chain: *"Research this prospect, then draft an intro email in my voice, then give me a one-page brief for the call."* That's researcher → email-manager → sales-assistant, and it's the product's "hand a whole job to AI" demo.
 - Skills vs agents: skills you trigger with `/command` (workflows you control); agents trigger themselves when the request matches (specialists you delegate to).
 
@@ -289,6 +306,40 @@ The product's pitch is a rhythm, not a feature. Yours:
 | Friday | `/weekly-review` |
 
 Two weeks of this loop and the compounding starts: `people/` notes get richer, `memory.md` accumulates decisions, and every skill output gets sharper because the context it reads keeps improving. That flywheel — not any single feature — is what the $2,000 install is actually selling.
+
+---
+
+## Step 9: Put the loop on a schedule
+
+Step 8 as written is manual — you type `/daily-brief` every morning, forever. The upgrade that turns the brain from a tool you drive into a system that taps you on the shoulder is **scheduling**, and Claude supports it natively:
+
+- **Claude Code on the web / desktop** supports scheduled tasks ("Routines"): a prompt that fires on a cron schedule into a session, with an optional push or email notification when it finishes. Set three:
+
+| Schedule | Prompt it fires |
+|---|---|
+| Weekdays 7:00am | "Run /daily-brief and notify me" |
+| Monday 8:00am | "Run /follow-up and flag anyone overdue" |
+| Friday 4:00pm | "Run /weekly-review" |
+
+- **In a terminal-only setup**, the same thing is one `cron` entry running `claude -p "/daily-brief"` — ask Claude to write it for you.
+
+Your approval rules still hold: a scheduled run can *prepare* drafts and briefings, but the permission settings from Step 4 mean nothing goes out without you. You wake up to a finished briefing and a queue of drafts to approve — which is precisely the daily experience the paid product demos.
+
+---
+
+## Upgrade paths: if you already run a business stack
+
+The steps above assume you're starting from markdown files and Google. If you already run real tools, wire the brain into them instead of duplicating them:
+
+| Instead of… | If you have… | Do this |
+|---|---|---|
+| `people/` markdown notes as your CRM | **Airtable** (or any CRM with an MCP/Connector) | Keep structured client data (status, value, last contact) in the CRM; keep narrative notes in `people/`. Point `/client-brief` and `/follow-up` at both. |
+| Pasting meeting notes into `/meeting-debrief` | **Granola**, Fireflies, or any transcript tool with a connector | Have the skill pull the transcript itself — debriefs happen without you copying anything. |
+| Gmail-only email skills | **Outlook / Microsoft 365** | Connect the Microsoft 365 Connector; `/inbox-triage` should sweep every inbox you actually use. |
+| Generic `/research` for client work | **Ahrefs**, Semrush, or your industry's data tool | Build skills on your data moat — see [client-report](ai-brain-skills/client-report/SKILL.md) and [aeo-snapshot](ai-brain-skills/aeo-snapshot/SKILL.md) for the pattern. |
+| Text-only content skills | **Canva** or a design-tool connector | Let `/social-post` and `/client-report` hand finished copy to a branded template instead of stopping at text. |
+
+The principle: the brain's job is to *join* your tools, not replace them. Every connector you already have is a skill input you don't have to build.
 
 ---
 
