@@ -10,6 +10,7 @@ Starter skills for the [AI Brain guide](../ai-brain-guide.md) (Step 5). Copy any
 | [follow-up](follow-up/SKILL.md) | Find stale relationships, draft the revival | CRM, email |
 | [braindump](braindump/SKILL.md) | Capture raw thoughts, file everything | Vault only |
 | [sop-writer](sop-writer/SKILL.md) | Document a process so it's delegable | Vault only |
+| [audit-trail](audit-trail/SKILL.md) | Trace/audit everything the Brain did; monthly spot-check | logs/, incidents.md, git |
 | [revenue-scoreboard](revenue-scoreboard/SKILL.md) | Weekly client scoreboard — the core delivery artifact | client CRM data, projects/ |
 | [client-report](client-report/SKILL.md) | Monthly visibility report (SEO/AEO engagements) | Ahrefs/GSC, Canva |
 | [aeo-snapshot](aeo-snapshot/SKILL.md) | AI-answer visibility vs competitors | Ahrefs Brand Radar |

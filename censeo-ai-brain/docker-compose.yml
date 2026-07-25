@@ -1,0 +1,74 @@
+# CenseoAI AI Brain — VPS stack (Hostinger, Docker Compose)
+# n8n (orchestration) + Postgres w/ pgvector (data + knowledge + audit) + Langfuse (observability)
+#
+# IMPORTANT before first deploy:
+# 1. An n8n instance is ALREADY RUNNING on this VPS. Do not end up with two.
+#    Either fold it into this stack (preferred: stop the old container, point this
+#    service at the existing n8n data volume/dir) or remove the n8n service below
+#    and run Postgres+Langfuse alongside the standalone instance. Decide once,
+#    record it in docs/decision-log.md.
+# 2. Copy .env.example to .env and fill every value. Never commit .env.
+# 3. This uses Langfuse v2 (single Postgres dependency — right-sized for a solo
+#    founder on one VPS). Langfuse v3 needs ClickHouse+Redis+MinIO; revisit only
+#    if trace volume demands it (decision-log candidate).
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: censeo
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./db/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d censeo"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    # not exposed to the internet — only reachable on the compose network
+
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DB_TYPE: postgresdb
+      DB_POSTGRESDB_HOST: postgres
+      DB_POSTGRESDB_DATABASE: n8n
+      DB_POSTGRESDB_USER: ${POSTGRES_USER}
+      DB_POSTGRESDB_PASSWORD: ${POSTGRES_PASSWORD}
+      N8N_HOST: ${N8N_HOST}
+      N8N_PROTOCOL: https
+      WEBHOOK_URL: https://${N8N_HOST}/
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY}
+      GENERIC_TIMEZONE: America/Detroit
+    ports:
+      - "127.0.0.1:5678:5678"   # front with a reverse proxy (Caddy/nginx) + TLS; do not expose 5678 raw
+    volumes:
+      - n8n_data:/home/node/.n8n
+
+  langfuse:
+    image: langfuse/langfuse:2
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/langfuse
+      NEXTAUTH_URL: https://${LANGFUSE_HOST}
+      NEXTAUTH_SECRET: ${LANGFUSE_NEXTAUTH_SECRET}
+      SALT: ${LANGFUSE_SALT}
+      TELEMETRY_ENABLED: "false"
+    ports:
+      - "127.0.0.1:3000:3000"   # reverse proxy + TLS, same as n8n
+
+volumes:
+  pgdata:
+  n8n_data:
+# NOTE: the n8n and langfuse databases must exist in Postgres. schema.sql
+# creates them via the init script on first boot of a fresh pgdata volume.

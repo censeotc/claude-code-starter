@@ -9,7 +9,7 @@ Builds the Challenger Sale package for one specific deal: teach them something a
 
 ## Connections used
 
-- **CRM (Airtable) + email + vault** — everything already known: prior contact, stage, who we're talking to, what's been said.
+- **CRM (GoHighLevel — the system of record) + email + vault** — everything already known: prior contact, pipeline stage, who we're talking to, what's been said.
 - **Research** — the prospect's website, reviews, visible marketing; their local competitors.
 - **The teaching artifact** — the strongest opener is revenue-leakage math on THEIR numbers: dead estimates, slow follow-up, and idle customer lists priced out from whatever is visible (reviews volume, truck count, average ticket for their trade). Where Ahrefs is available, an `/aeo-snapshot` ("AI recommends your competitor, not you") is the alternate door-opener.
 - **Know the buyer** — Owner/President buys found money and no rip-and-replace; GM/COO buys adoption and scoreboards without new software; Ops/Service Manager buys less chasing; Sales Manager buys a replacement pipeline. Frame the same insight for whoever is in the room.

@@ -9,7 +9,7 @@ Joins every source that knows about one client into one page: CRM record, email 
 
 ## Connections used (use every one that's connected; note which were unavailable)
 
-- **CRM (Airtable)** — search for the client's record: status, deal value, services, last contact, owner.
+- **CRM (GoHighLevel — the system of record)** — search for the client's contact/deal record: status, pipeline stage, deal value, services, last contact, owner. Via the GHL API/MCP connection; if unavailable this session, say so and use the vault note only.
 - **Email (Outlook and/or Gmail)** — last 5 relevant threads: who wrote last, what's pending.
 - **Meetings (Granola)** — most recent meeting(s) with them: decisions and action items from the transcript.
 - **Calendar (Google Calendar / Outlook)** — anything upcoming with them.

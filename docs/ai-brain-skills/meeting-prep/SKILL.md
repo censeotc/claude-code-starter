@@ -10,7 +10,7 @@ Turns "I have a call in 20 minutes" into a half-page you can walk in with.
 ## Connections used
 
 - **Calendar** — find the event (by time or name). If ambiguous, list today's events and ask which.
-- **CRM (Airtable) + vault `people/`** — match each external attendee to what we know about them.
+- **CRM (GoHighLevel — the system of record) + vault `people/`** — match each external attendee to what we know about them.
 - **Meetings (Granola)** — the last transcript with these attendees: what was decided, what we owe them.
 - **Email** — any thread with the attendees since that last meeting.
 
