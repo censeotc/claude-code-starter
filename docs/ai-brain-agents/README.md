@@ -26,6 +26,8 @@ These three don't do tasks — they protect the quality of the operator's thinki
 | [decision-coach](decision-coach.md) | Structure big calls, force honest options, keep the decision journal | "help me think through this" |
 | [focus-coach](focus-coach.md) | Priorities vs. stated strategy, commitment ledger, weekly score | "what should I focus on", "keep me honest" |
 
+> **Operating manual:** the [AI Agent Orchestration Plan](../ai-brain-orchestration.md) defines the cadences, event-driven playbooks, handoff contracts, and escalation rules that run this roster as one company.
+
 ## How they fit together
 
 - **A deal**: bizdev-partner opens the channel → sales-assistant + /deal-prep close it (leakage math as the teaching artifact) → account-manager onboards → revops-engineer delivers the pilot and the scoreboards → account-manager converts pilot → build → retainer → finance-manager bills each rung.
