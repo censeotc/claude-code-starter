@@ -17,6 +17,7 @@ Last full read-through: 2026-07-25 · Owner: Scott Withers · Review cadence: mo
 | HVAC lead qualification | [sops/lead-qualification-hvac.md](sops/lead-qualification-hvac.md) | Critical | 2026-07-25 |
 | Follow-up / review requests | [sops/customer-followup.md](sops/customer-followup.md) | Reference | 2026-07-25 |
 | Real-estate disclosure language | [sops/real-estate-disclosure-language.md](sops/real-estate-disclosure-language.md) | Critical | 2026-07-25 |
+| Client onboarding | [sops/client-onboarding.md](sops/client-onboarding.md) + [clients/_template/config.yml](clients/_template/config.yml) | Critical | 2026-07-25 |
 | Governance (reliance tiers, logging, incidents) | CenseoAI Governance Template v4.9 (signed copy, kept with governance artifacts) + [../docs/ai-brain-governance/](../docs/ai-brain-governance/) | Critical | 2026-07-25 |
 | Settled decisions | [docs/decision-log.md](docs/decision-log.md) | Reference | 2026-07-25 |
 
