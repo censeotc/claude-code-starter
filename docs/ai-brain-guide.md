@@ -221,7 +221,7 @@ You already have working examples to crib from in this repo: [prd-generator](../
 Nine of the highest-value skills are pre-built in [docs/ai-brain-skills/](ai-brain-skills/) — copy any folder into your vault's `.claude/skills/` and edit the specifics (your CRM base, your inbox, your folders):
 
 - **Daily operations:** [inbox-triage](ai-brain-skills/inbox-triage/SKILL.md), [meeting-prep](ai-brain-skills/meeting-prep/SKILL.md), [follow-up](ai-brain-skills/follow-up/SKILL.md), [braindump](ai-brain-skills/braindump/SKILL.md)
-- **Client work:** [client-brief](ai-brain-skills/client-brief/SKILL.md), [deal-prep](ai-brain-skills/deal-prep/SKILL.md), [client-report](ai-brain-skills/client-report/SKILL.md), [aeo-snapshot](ai-brain-skills/aeo-snapshot/SKILL.md)
+- **Client work:** [client-brief](ai-brain-skills/client-brief/SKILL.md), [deal-prep](ai-brain-skills/deal-prep/SKILL.md), [revenue-scoreboard](ai-brain-skills/revenue-scoreboard/SKILL.md), [client-report](ai-brain-skills/client-report/SKILL.md), [aeo-snapshot](ai-brain-skills/aeo-snapshot/SKILL.md)
 - **Process:** [sop-writer](ai-brain-skills/sop-writer/SKILL.md)
 
 Each one states which connections it uses and degrades gracefully when one is missing.
