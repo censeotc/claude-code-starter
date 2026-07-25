@@ -1,5 +1,7 @@
 # Set Up Your AI Brain — The Plain-English Guide
 
+> 📄 Also available as a [CenseoAI-branded PDF](assets/ai-brain-setup-censeoai.pdf).
+
 This guide assumes you know **nothing** about setting this up. Every step tells you exactly what to click or type, and what you should see when it worked. You already know your everyday tools (Outlook, Airtable, Granola, Ahrefs, Canva) — this teaches only the new part.
 
 **What you're building, in one sentence:** a folder on your computer that acts like a filing cabinet, a team of AI employees who read and write in that cabinet, and a rulebook so nothing goes out the door without your OK.
