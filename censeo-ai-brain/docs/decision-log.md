@@ -13,6 +13,7 @@ Settled calls, dated. Agents and humans: do not re-litigate — reopen only with
 | 7 | 2026-07-25 | GHL is CRM of record EVERYWHERE, incl. Scott's vault skills; Airtable demoted to non-CRM uses only | One system of record, no sync drift |
 | 8 | 2026-07-25 | Launch sequencing: missed-call text-back ships with HITL gate on every send (v4.9 manual-routine path); autonomous only after Module A recognition + tool validation + ≥95% unmodified approval over 30+ sends | Reconciles BUILD-SPEC weeks-1–4 timeline with signed Governance v4.9 |
 | 9 | 2026-07-25 | Langfuse v2 (single-Postgres) not v3 | Right-sized for one VPS; revisit on trace volume |
+| 10 | 2026-07-25 | Client deployments = config-driven from clients/_template; real client dirs gitignored while this lives in the course repo; every client launches HITL-first with a per-client flip checklist | Productized onboarding (sops/client-onboarding.md); isolation + sensitivity |
 
 ## Open (tracked, non-blocking — BUILD-SPEC §12)
 - n8n Embed Partner terms before any Phase 3 resale of n8n-based product

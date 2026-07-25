@@ -6,3 +6,8 @@ __pycache__/
 
 # censeo-ai-brain secrets
 censeo-ai-brain/.env
+
+# client configs are business-sensitive; only the template is committed
+censeo-ai-brain/clients/*
+!censeo-ai-brain/clients/_template/
+!censeo-ai-brain/clients/README.md

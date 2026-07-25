@@ -1,0 +1,69 @@
+# Client AI Brain configuration — ONE file per client, copied from _template.
+# Every workflow parameter lives here; nothing client-specific is hardcoded
+# in prompts, SOPs, or n8n workflows. NEEDS-INPUT in a critical field = not launchable.
+# Real client dirs are gitignored (they contain business-sensitive data);
+# only this template is committed. See sops/client-onboarding.md.
+
+client:
+  code: NEEDS-INPUT              # short slug, e.g. sheren-ph  (tags audit_log, Langfuse, folders)
+  business_name: NEEDS-INPUT     # exactly as it should appear in messages
+  trade: NEEDS-INPUT             # hvac | plumbing | gutter | electrical | multi
+  timezone: America/Detroit
+  onboarded: NEEDS-INPUT         # YYYY-MM-DD
+  package: NEEDS-INPUT           # leakage-audit | pilot-45d | build-90d | retainer
+
+accounts:                        # THEIR accounts — isolation rule, see Gate 1
+  ghl_location_id: NEEDS-INPUT
+  n8n_instance: NEEDS-INPUT      # url/host of THEIR n8n workspace
+  langfuse_project: NEEDS-INPUT
+  llm_keys: NEEDS-INPUT          # theirs | censeoai-tagged  (per the deal)
+
+contact_rules:
+  business_hours: "Mon-Fri 08:00-17:00, Sat 09:00-13:00"   # adjust
+  send_window: "08:00-21:00"     # recipient-local; hard-coded gate in n8n
+  max_agent_messages_without_reply: 3
+  tcpa_basis: NEEDS-INPUT        # e.g. "inbound call from consumer's own number; single contextual text-back; STOP honored"
+  dnc_list_imported: false       # must be true before launch
+  opt_out_text: "Reply STOP to opt out"
+
+escalation:
+  phone: NEEDS-INPUT             # on-call human, confirmed in writing by owner
+  approver: NEEDS-INPUT          # HITL approver: name + channel (their office mgr | censeoai)
+  safety_keywords:               # adjust per trade (Gate 2)
+    - gas
+    - leak
+    - smell
+    - smoke
+    - carbon monoxide
+    - flood
+    - sparking
+    - no heat
+    - no AC
+  always_human:                  # from the owner walk-through (Gate 3)
+    - NEEDS-INPUT
+
+pricing:
+  source: NEEDS-INPUT            # ghl-custom-fields | postgres-pricing-table
+  populated: false               # true only when their real price book is loaded
+  # agents NEVER quote prices not found in the source above
+
+voice:
+  review_link: NEEDS-INPUT
+  samples: |                     # 3-5 real messages from their front desk (Gate 3)
+    NEEDS-INPUT
+
+followup:                        # workflow 03 offsets
+  satisfaction_check: same-evening
+  review_request_days: 2
+  checkin_days: 30
+
+launch:
+  hitl_gate: true                # stays true until flip checklist passes (Gate 5)
+  flip_checklist:
+    module_a_recognition_current: false
+    tool_validation_id: null
+    approved_sends: 0            # needs 30+ at >=95% unmodified
+  test_run:                      # Gate 4 — fill after the 7-case test passes
+    date: null
+    run_by: null
+    results: null
