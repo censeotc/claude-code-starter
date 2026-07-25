@@ -4,6 +4,8 @@ A how-to guide for building the system sold as the **"AI Brain"** (Kieren Newbor
 
 Total cost to build it yourself: **a Claude subscription (~$20/month) and an afternoon.**
 
+> 📄 Prefer a document? This guide is also available as a [CenseoAI-branded PDF](assets/ai-brain-guide-censeoai.pdf).
+
 ---
 
 ## What the product actually is
