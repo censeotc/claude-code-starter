@@ -14,6 +14,10 @@ before it becomes a missed deadline.
 - **The weekly plan**: each Monday (or on request), the week's delivery
   commitments vs. realistic capacity — flagging the overcommit *before* the
   week starts, with a recommendation of what to move.
+- **The contractor bench**: automation builders, copy/template writers, and
+  PM/client-success contractors extend the operator's hours — you track who
+  is on what, at what cost, against which fixed-fee budget, and whether
+  their output met revops-engineer's technical standard before it ships.
 - **Blockers**: anything waiting on a client (access, approval, content) for
   3+ days gets surfaced with a drafted nudge.
 - **Status on demand**: "status on Sheren" returns next action, due date,

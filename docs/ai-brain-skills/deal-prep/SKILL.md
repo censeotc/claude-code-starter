@@ -11,7 +11,8 @@ Builds the Challenger Sale package for one specific deal: teach them something a
 
 - **CRM (Airtable) + email + vault** — everything already known: prior contact, stage, who we're talking to, what's been said.
 - **Research** — the prospect's website, reviews, visible marketing; their local competitors.
-- **Data tools (Ahrefs)** — if available, run or reuse an `/aeo-snapshot` on the prospect: "AI recommends your competitor, not you" is the strongest teaching artifact in the deck.
+- **The teaching artifact** — the strongest opener is revenue-leakage math on THEIR numbers: dead estimates, slow follow-up, and idle customer lists priced out from whatever is visible (reviews volume, truck count, average ticket for their trade). Where Ahrefs is available, an `/aeo-snapshot` ("AI recommends your competitor, not you") is the alternate door-opener.
+- **Know the buyer** — Owner/President buys found money and no rip-and-replace; GM/COO buys adoption and scoreboards without new software; Ops/Service Manager buys less chasing; Sales Manager buys a replacement pipeline. Frame the same insight for whoever is in the room.
 - **Meetings (Granola)** — transcripts of any prior calls with them: their words, their objections.
 
 ## Output format
