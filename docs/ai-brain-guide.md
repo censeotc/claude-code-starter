@@ -270,6 +270,10 @@ demands more. Present it for approval. NEVER send anything yourself.
 
 Build the rest the same way, or paste the table above and ask Claude to generate all 8, then edit the descriptions until delegation triggers reliably.
 
+### Ready-made starters: the expanded org chart
+
+When the core 8 feel routine, [docs/ai-brain-agents/](ai-brain-agents/) has eleven more pre-built agents that round out a full virtual leadership team — finance, marketing, SEO/AEO delivery, account management, project management, business development, product, and legal, plus three **cognitive agents** (thinking-partner, decision-coach, focus-coach) whose only job is protecting the quality of your thinking: challenging your plans, structuring your decisions, and holding you to what you said mattered. Copy any file into `.claude/agents/` and edit the specifics.
+
 Two frontmatter notes:
 - **`tools`:** omitting the field (as above) lets the agent use every tool you've connected — the right default for an email manager that needs your email MCP. List specific tools only to *restrict* an agent (e.g. give `content-writer` just `Read` so it can never touch email). An agent whose tool list doesn't include the tools its job needs will silently fail at that job.
 - **`model`:** model names change over time — check the current list with `/model` before hardcoding, or omit the field entirely to inherit whatever model your session runs. Omitting is the low-maintenance default.
