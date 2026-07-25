@@ -3,3 +3,6 @@ scripts/.env
 bot/.env
 __pycache__/
 *.pyc
+
+# censeo-ai-brain secrets
+censeo-ai-brain/.env

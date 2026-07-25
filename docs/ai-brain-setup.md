@@ -148,7 +148,7 @@ Your daily tools connect through the **Claude desktop app**, and many may alread
    - **Microsoft 365** (your Outlook email + calendar — the important one)
    - **Gmail** (the second inbox)
    - **Google Calendar** and **Google Drive**
-   - **Airtable** (your CRM)
+   - **GoHighLevel** (your CRM — the system of record for contacts, deals, and pipelines; connect via its API/MCP server. Airtable only if you still use it for non-CRM databases)
    - **Granola** (meeting transcripts)
    - **Ahrefs** (SEO/AEO data)
    - **Canva** (branded deliverables)

@@ -9,7 +9,7 @@ Finds every relationship going stale and hands you the first line of the message
 
 ## Connections used
 
-- **CRM (Airtable)** — records where last-contact is older than the threshold for their stage (active client: 14 days; open deal: 5 days; warm prospect: 30 days — adjust to taste).
+- **CRM (GoHighLevel — the system of record)** — contacts/deals where last-contact is older than the threshold for their stage (active client: 14 days; open deal: 5 days; warm prospect: 30 days — adjust to taste).
 - **Email (Outlook and/or Gmail)** — sent mail where WE wrote last, got no reply, and 4+ days have passed.
 - **Vault** — `memory.md` active commitments and `people/` notes with promised next steps.
 
