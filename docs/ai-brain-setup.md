@@ -169,6 +169,22 @@ Two layers, because a promise plus a lock beats a promise.
 
 ✅ **You know it worked when:** you ask Claude to "send a test email to yourself" and it shows you a draft and an approval prompt instead of just sending.
 
+### 6c. Turn on the black box recorder (governance + logging)
+
+Your governance framework (the CenseoAI Governance Template v4.9) and a full audit trail install with one paste. In Claude Code:
+
+```
+From https://github.com/censeotc/claude-code-starter, copy
+docs/ai-brain-governance/governance-operational.md into my context/ folder
+as governance.md. Create a logs/ folder with an empty releases.md and
+events.md, and an empty incidents.md in the vault root using the entry
+template from docs/ai-brain-governance/incident-playbook.md. Then add the
+"Governance & logging" standing rules block from
+docs/ai-brain-governance/logging.md to my CLAUDE.md.
+```
+
+✅ **You know it worked when:** you ask Claude to do anything, and afterward `logs/` contains today's file with a one-line record of what it did — including the reliance tier. Full details: [the logging spec](ai-brain-governance/logging.md) and [incident playbook](ai-brain-governance/incident-playbook.md).
+
 ---
 
 ## Part 7 — Test drive (15 min)
@@ -188,10 +204,12 @@ Try one of each, in the desktop app or Claude Code:
 Right now you have to remember to run things. Schedules fix that. Using Claude Code on the web ([claude.ai/code](https://claude.ai/code)) or the desktop app, create three scheduled tasks (called Routines) by asking in plain English:
 
 ```
-Create three recurring scheduled tasks for me:
+Create four recurring scheduled tasks for me:
 1. Weekdays at 7:00am my time: run /daily-brief and notify me when ready.
 2. Mondays at 8:00am: run /follow-up and flag anyone overdue.
 3. Fridays at 4:00pm: run /weekly-review with the focus-coach score.
+4. Daily at 6:00pm: commit the vault to git as a daily checkpoint and
+   verify today's action log has no gaps.
 ```
 
 Your Part 6 lock still applies — a scheduled run can *prepare* everything but *send* nothing.

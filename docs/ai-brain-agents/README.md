@@ -27,6 +27,8 @@ These three don't do tasks — they protect the quality of the operator's thinki
 | [focus-coach](focus-coach.md) | Priorities vs. stated strategy, commitment ledger, weekly score | "what should I focus on", "keep me honest" |
 
 > **Operating manual:** the [AI Agent Orchestration Plan](../ai-brain-orchestration.md) defines the cadences, event-driven playbooks, handoff contracts, and escalation rules that run this roster as one company.
+>
+> **Governance & audit:** every agent operates under the [governance layer](../ai-brain-governance/) — reliance tiers on every output, append-only action/release logs, the incident correction loop, and the `/audit-trail` skill for tracing all of it.
 
 ## How they fit together
 

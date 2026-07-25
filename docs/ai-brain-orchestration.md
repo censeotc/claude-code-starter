@@ -120,6 +120,8 @@ Everything else waits. The system's promise is *fewer* interruptions, not more.
 ## 6. Hard guarantees (unchanged, everywhere)
 
 - No agent sends, signs, pays, publishes, or deletes. Draft → present → operator approves. Enforced in `settings.json` permissions, not just prompts.
+- **Everything is tiered and logged.** Every output carries its reliance tier (Governance Template v4.9), every action lands in the append-only action log, every external release gets a release-log entry *before* it goes out, and incidents follow the [playbook](ai-brain-governance/incident-playbook.md) — full spec in [ai-brain-governance/](ai-brain-governance/), queryable via `/audit-trail`.
+- The **no-release rule**: contractual, warranty, guarantee, or refund language never leaves the building without legal review — regardless of who approved what.
 - Cognitive agents advise and challenge; they never execute.
 - A scheduled Routine may *prepare* anything but *send* nothing.
 - When agents disagree (e.g., focus-coach says no, bizdev says yes), both positions go to the operator side by side — no agent overrules another.
