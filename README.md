@@ -197,6 +197,7 @@ Sub-agents are specialists Claude delegates to automatically — no `/command` n
 | [`data-analyst`](module-3/.claude/agents/data-analyst.md) | Sonnet | Reads CSV, JSON, or data exports and returns 3 key stats, 1 anomaly worth investigating, and 1 directional trend |
 | [`copy-writer`](module-3/.claude/agents/copy-writer.md) | Haiku | Writes in-app copy, tooltips, button labels, and microcopy. Returns 3 options tagged [Direct], [Warm], or [Bold] — all under 12 words |
 | [`deck-builder`](module-3/.claude/agents/deck-builder.md) | Sonnet | Researches a topic using Brave MCP (Reddit, Medium, YouTube) and produces a McKinsey-style presentation deck with speaker notes — designed for non-technical audiences |
+| [`agent-architect`](.claude/agents/agent-architect.md) | Opus | Meta-agent: interviews you about a task, then designs and writes a new sub-agent file applying Anthropic's best practices — least-privilege tools, model routing, trigger-rich description. Always drafts for review before writing |
 
 ---
 

@@ -13,6 +13,7 @@ Update this file after major changes or decisions.
 | `module-1/CLAUDE.md` renamed to `CLAUDE-template.md` | Prevents confusion — students should create their own CLAUDE.md, not use the repo's | 2026-04-05 |
 | Root `CLAUDE.md` is for instructor use | Gives Claude context when Hamza is working on course content from the root folder | 2026-04-05 |
 | Version tags follow `vN.0` per module | Easy to restore course state after each module; visible in GitHub under Tags | 2026-04-05 |
+| `agent-architect` meta-agent added at root `.claude/agents/` only (not module-3) | Course infrastructure, not module content — generates well-formed sub-agents so students don't re-read the agents guide; the distilled knowledge lives in the preloaded `agent-best-practices` skill | 2026-08-04 |
 
 ---
 
@@ -32,6 +33,7 @@ Update this file after major changes or decisions.
 | prd-generator | `/prd-generator` | `module-1/.claude/skills/prd-generator/SKILL.md` | Live |
 | user-story-writer | `/user-story-writer` | `module-1/.claude/skills/user-story-writer/SKILL.md` | Live |
 | explain-me-a-repo | `/explain-me-a-repo` | `module-2/.claude/skills/explain-me-a-repo/SKILL.md` | Live — requires Brave MCP for live browsing |
+| agent-best-practices | Preloaded by `agent-architect` via `skills:` frontmatter; also usable directly | `.claude/skills/agent-best-practices/SKILL.md` | Live |
 
 ---
 
