@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "8bf539b31c968678384ce85c0d652f6772396d0a6d876b328a8b8219033940bf",
+    "https://docs.claude.com/en/release-notes/api": "7e0d73a54930102e2cad3b2a22d9e57f7d215b3ebc791ee466079c3a8adc17a3",
     "https://docs.claude.com/en/release-notes/claude-apps": "96cad57a331efa55a73e9aff682596b3aa86ec4414b99ca148f48b3328245214"
   },
   "seen_entries": {
@@ -419,6 +419,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.235": "2026-08-18T21:13:50.471559+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.236": "2026-08-19T20:16:05.271745+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.237": "2026-08-20T02:10:51.779130+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.238": "2026-08-20T21:18:26.246960+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.238": "2026-08-20T21:18:26.246960+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.239": "2026-08-21T20:14:29.831686+00:00"
   }
 }
