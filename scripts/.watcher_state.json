@@ -1,8 +1,8 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "66a6a696a7a7babbf88fe74b1f0e054248709bf2d2a9c1a05196a77763ac080d",
-    "https://docs.claude.com/en/release-notes/claude-apps": "7ae2a0ace6175b20aaa7b95bcee6cae42e447fcf0bf133e9326be5c9798ec304"
+    "https://docs.claude.com/en/release-notes/api": "6742e075b6bf4207c2b522720c7d28198a68bb47e17a189ad6fa494430d490a3",
+    "https://docs.claude.com/en/release-notes/claude-apps": "928b8a22f788f8039e824376d88a1dea0aec6a4e391088b8084a81a3117d54bc"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -316,6 +316,7 @@
     "https://www.anthropic.com/research/glasswing-initial-update": "2026-05-22T20:28:09.722805+00:00",
     "https://www.anthropic.com/research/global-workspace": "2026-07-06T18:04:36.057786+00:00",
     "https://www.anthropic.com/research/how-canada-uses-claude": "2026-07-14T15:16:30.587663+00:00",
+    "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities": "2026-09-10T19:21:16.076966+00:00",
     "https://www.anthropic.com/research/making-claude-a-chemist": "2026-06-05T20:45:26.395081+00:00",
     "https://www.anthropic.com/research/multiagent-systems": "2026-08-13T04:00:01.862241+00:00",
     "https://www.anthropic.com/research/n-days": "2026-06-17T17:45:09.414856+00:00",
