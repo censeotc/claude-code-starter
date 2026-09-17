@@ -1,8 +1,8 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "27019388ed4c63ef2c2cf2f0173461146ae6358dcb7d2a93d11523df0e8acb4d",
-    "https://docs.claude.com/en/release-notes/claude-apps": "13df60435eb717098fc57053ebe100cbd666f50a2054d2a0a796356842fb9376"
+    "https://docs.claude.com/en/release-notes/api": "8be414f0bcf3dd42f71e96d8973c2875c3fc327670d9ba7a261c845578ba2eaa",
+    "https://docs.claude.com/en/release-notes/claude-apps": "ff9bfdda9f0e4a40344c3b9374fea39c4f26a98e5e261d0122189d6ea15986d9"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -211,6 +211,7 @@
     "https://www.anthropic.com/news/kiyoung-choi-representative-director-anthropic-korea": "2026-05-27T02:33:53.499165+00:00",
     "https://www.anthropic.com/news/krishna-rao-joins-anthropic": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/lawrence-livermore-national-laboratory-expands-claude-for-enterprise-to-empower-scientists-and": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/life-sciences-verification-program": "2026-09-17T17:54:03.201777+00:00",
     "https://www.anthropic.com/news/lyft-announcement": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/mariano-florentino-long-term-benefit-trust": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/maryland-partnership": "2026-05-12T17:17:13.057300+00:00",
