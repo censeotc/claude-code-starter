@@ -2,7 +2,7 @@
   "alerted_entries": {},
   "page_hashes": {
     "https://docs.claude.com/en/release-notes/api": "0b4120a99903819909f64c1b49c5bb87998e9263bd34e51ee3f9f73a7f0a039d",
-    "https://docs.claude.com/en/release-notes/claude-apps": "5735794a9d3dec84d8b6fedd1e9dfb398f534ac5a09d623fa74deccf84411ccc"
+    "https://docs.claude.com/en/release-notes/claude-apps": "67894db16e9e1d6a75944a707f7b3d131f49be1f4979c73b7936e7002fe74b8c"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -113,6 +113,7 @@
     "https://www.anthropic.com/news/claude-code-security": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/claude-corps": "2026-06-11T14:30:49.734739+00:00",
     "https://www.anthropic.com/news/claude-design-anthropic-labs": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/claude-discovers-novel-enzyme-system": "2026-09-23T20:51:31.296226+00:00",
     "https://www.anthropic.com/news/claude-europe": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/claude-fable-5-mythos-5": "2026-06-09T19:07:59.890944+00:00",
     "https://www.anthropic.com/news/claude-for-creative-work": "2026-05-12T17:17:13.057300+00:00",
@@ -465,6 +466,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.276": "2026-09-18T02:14:06.565630+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.277": "2026-09-18T19:18:44.425761+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.278": "2026-09-19T05:17:46.571303+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.280": "2026-09-22T19:23:25.641680+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.280": "2026-09-22T19:23:25.641680+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.281": "2026-09-23T20:51:31.296226+00:00"
   }
 }
