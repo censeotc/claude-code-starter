@@ -1,8 +1,8 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "a737fe587e7fa7111ef63fb7b9b85b7da055929684835aef0ce2a95c9b0aead9",
-    "https://docs.claude.com/en/release-notes/claude-apps": "e7087610e4a111c21309040c808891ff6b8dabea98a25ef55533bc1283b66f79"
+    "https://docs.claude.com/en/release-notes/api": "33aa88130178eab955101d188572f536094db584ab5f217091db00513be631d9",
+    "https://docs.claude.com/en/release-notes/claude-apps": "ac99df6d315e6d5e0ce7158bf80a31a7356966ee80b6db96d3e3df05b29bc735"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -328,6 +328,7 @@
     "https://www.anthropic.com/research/off-switch-dual-use": "2026-07-08T23:59:49.568885+00:00",
     "https://www.anthropic.com/research/project-fetch-phase-two": "2026-06-18T19:16:26.728109+00:00",
     "https://www.anthropic.com/research/project-pilot": "2026-07-24T18:11:06.951593+00:00",
+    "https://www.anthropic.com/research/project-swap": "2026-09-24T21:53:56.024690+00:00",
     "https://www.anthropic.com/research/project-vend-2": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/reviewing-the-evidence-on-worker-retraining-programs": "2026-08-12T18:47:47.396184+00:00",
     "https://www.anthropic.com/research/riemann-zeta": "2026-08-10T18:42:06.809548+00:00",
@@ -467,6 +468,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.277": "2026-09-18T19:18:44.425761+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.278": "2026-09-19T05:17:46.571303+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.280": "2026-09-22T19:23:25.641680+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.281": "2026-09-23T20:51:31.296226+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.281": "2026-09-23T20:51:31.296226+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.282": "2026-09-24T21:53:56.024690+00:00"
   }
 }
