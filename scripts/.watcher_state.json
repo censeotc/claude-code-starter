@@ -2,7 +2,7 @@
   "alerted_entries": {},
   "page_hashes": {
     "https://docs.claude.com/en/release-notes/api": "77a75b12de6f5d0bdd77bd5014acca7cb1331803eb8bd5c24baa6542aeaeeaa2",
-    "https://docs.claude.com/en/release-notes/claude-apps": "99d8fe8f71a4c50a7d13e6567ddca36f6578bde31863728dd43d7d758d641b99"
+    "https://docs.claude.com/en/release-notes/claude-apps": "62f9689cfbf30c60daea92a6d0ebd2b22a373a501d14e2f29f553025cd8d2965"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -318,6 +318,7 @@
     "https://www.anthropic.com/research/exploit-evals": "2026-06-17T17:45:09.414856+00:00",
     "https://www.anthropic.com/research/formalizing-fermats-last-theorem": "2026-09-04T19:12:48.259544+00:00",
     "https://www.anthropic.com/research/glasswing-initial-update": "2026-05-22T20:28:09.722805+00:00",
+    "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities": "2026-09-29T21:10:11.141808+00:00",
     "https://www.anthropic.com/research/global-workspace": "2026-07-06T18:04:36.057786+00:00",
     "https://www.anthropic.com/research/how-canada-uses-claude": "2026-07-14T15:16:30.587663+00:00",
     "https://www.anthropic.com/research/intelligence-targeting-conventional-weapons-capabilities": "2026-09-10T19:21:16.076966+00:00",
@@ -341,6 +342,7 @@
     "https://www.anthropic.com/research/team/societal-impacts": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/trustworthy-agents": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/research/yes-claude-can-do-nine-loops": "2026-09-25T19:42:26.949411+00:00",
+    "https://www.anthropic.com/research/your-thoughts-on-ai": "2026-09-29T21:10:11.141808+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.126": "2026-05-12T17:17:13.057300+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.128": "2026-05-12T17:17:13.057300+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.129": "2026-05-12T17:17:13.057300+00:00",
@@ -472,6 +474,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.281": "2026-09-23T20:51:31.296226+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.282": "2026-09-24T21:53:56.024690+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.283": "2026-09-25T22:57:24.369410+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.284": "2026-09-28T22:21:00.497859+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.284": "2026-09-28T22:21:00.497859+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.285": "2026-09-29T21:10:11.141808+00:00"
   }
 }
