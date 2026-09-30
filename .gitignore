@@ -1,3 +1,4 @@
+.DS_Store
 course-modules/
 scripts/.env
 bot/.env
