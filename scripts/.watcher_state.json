@@ -2,7 +2,7 @@
   "alerted_entries": {},
   "page_hashes": {
     "https://docs.claude.com/en/release-notes/api": "56860af37abee8a46db18c74049fbc33c535488384b69fa2e583896b4fbee6cd",
-    "https://docs.claude.com/en/release-notes/claude-apps": "f8eb2f523cc604edabbbdf5bf8cc05822a04886430cdfbf17499a7006f9c2533"
+    "https://docs.claude.com/en/release-notes/claude-apps": "35bc004c8701b11a454c5892253503e20d8fcc332fbfdb01d5db56b450fe29b1"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -32,6 +32,7 @@
     "https://www.anthropic.com/engineering/writing-tools-for-agents": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/institute/measuring-pace-of-ai-development": "2026-10-04T22:06:25.147898+00:00",
     "https://www.anthropic.com/news/100k-context-windows": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/2026-usage-policy-update": "2026-10-08T20:21:41.867574+00:00",
     "https://www.anthropic.com/news/3-5-models-and-computer-use": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/AI-enabled-cyber-threats-mitre-attack": "2026-06-03T13:07:35.959738+00:00",
     "https://www.anthropic.com/news/Introducing-code-with-claude": "2026-05-12T17:17:13.057300+00:00",
@@ -59,6 +60,7 @@
     "https://www.anthropic.com/news/anthropic-appoints-irina-ghose-as-managing-director-of-india": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-bcg": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-codepath-partnership": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/anthropic-cyber-mission": "2026-10-08T20:21:41.867574+00:00",
     "https://www.anthropic.com/news/anthropic-economic-index-connector": "2026-07-22T18:02:01.552413+00:00",
     "https://www.anthropic.com/news/anthropic-economic-index-insights-from-claude-sonnet-3-7": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-education-report-how-educators-use-claude": "2026-05-12T17:17:13.057300+00:00",
@@ -188,6 +190,7 @@
     "https://www.anthropic.com/news/frontier-model-security": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/frontier-threats-red-teaming-for-ai-safety": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/gates-foundation-partnership": "2026-05-14T16:05:47.129297+00:00",
+    "https://www.anthropic.com/news/genesis-mission-commitment": "2026-10-08T20:21:41.867574+00:00",
     "https://www.anthropic.com/news/genesis-mission-partnership": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/github-copilot": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/golden-gate-claude": "2026-05-12T17:17:13.057300+00:00",
@@ -396,6 +399,7 @@
     "https://www.anthropic.com/research/introspection": "2026-10-04T22:06:25.147898+00:00",
     "https://www.anthropic.com/research/labor-market-impacts": "2026-10-04T22:06:25.147898+00:00",
     "https://www.anthropic.com/research/language-models-mostly-know-what-they-know": "2026-10-04T22:06:25.147898+00:00",
+    "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source": "2026-10-08T20:21:41.867574+00:00",
     "https://www.anthropic.com/research/long-running-Claude": "2026-10-04T22:06:25.147898+00:00",
     "https://www.anthropic.com/research/making-claude-a-chemist": "2026-06-05T20:45:26.395081+00:00",
     "https://www.anthropic.com/research/many-shot-jailbreaking": "2026-10-04T22:06:25.147898+00:00",
@@ -608,6 +612,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.291": "2026-10-06T10:54:25.815752+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.292": "2026-10-06T21:27:27.961393+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.293": "2026-10-07T20:22:54.206763+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.294": "2026-10-08T06:49:57.162728+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.294": "2026-10-08T06:49:57.162728+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.295": "2026-10-08T20:21:41.867574+00:00"
   }
 }
