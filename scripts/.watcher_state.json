@@ -1,8 +1,8 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "56860af37abee8a46db18c74049fbc33c535488384b69fa2e583896b4fbee6cd",
-    "https://docs.claude.com/en/release-notes/claude-apps": "35bc004c8701b11a454c5892253503e20d8fcc332fbfdb01d5db56b450fe29b1"
+    "https://docs.claude.com/en/release-notes/api": "9944238554a8aadcfe76e2c26652e217d138149f0108ef113b8fdc1d3f0be4f7",
+    "https://docs.claude.com/en/release-notes/claude-apps": "1705fc17a66f8dcba80e45a22cbba4b95c86f978203a5a731586a825228a1fd7"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
@@ -614,6 +614,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.292": "2026-10-06T21:27:27.961393+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.293": "2026-10-07T20:22:54.206763+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.294": "2026-10-08T06:49:57.162728+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.295": "2026-10-08T20:21:41.867574+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.295": "2026-10-08T20:21:41.867574+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.296": "2026-10-09T19:54:16.656796+00:00"
   }
 }
