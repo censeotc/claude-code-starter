@@ -1,8 +1,8 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "2b5e21d4bb009f3aaa01e337d78ddaf1738921a5471a8cb33881ac4210364211",
-    "https://docs.claude.com/en/release-notes/claude-apps": "0b7f78de1b5f009de2cbb70f85dbbca8cb8757d287fc06aa5796bdfdfb283b75"
+    "https://docs.claude.com/en/release-notes/api": "ee85ec8e357c2e217154b9bc7aa335a31148279f5774d97213084485ed89464c",
+    "https://docs.claude.com/en/release-notes/claude-apps": "8432804006f069cc0afb99ff2ded17bd36c485b4db4b616e64e14c62427d4f96"
   },
   "seen_entries": {
     "https://www.anthropic.com/engineering/AI-resistant-technical-evaluations": "2026-05-12T17:17:13.057300+00:00",
