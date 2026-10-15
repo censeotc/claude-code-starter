@@ -1,7 +1,7 @@
 {
   "alerted_entries": {},
   "page_hashes": {
-    "https://docs.claude.com/en/release-notes/api": "ee85ec8e357c2e217154b9bc7aa335a31148279f5774d97213084485ed89464c",
+    "https://docs.claude.com/en/release-notes/api": "37408624cb512e00e9513a8a1077179dd3fa3ce3520fd0089cfaac9dc9fd4ee0",
     "https://docs.claude.com/en/release-notes/claude-apps": "f8eb2f523cc604edabbbdf5bf8cc05822a04886430cdfbf17499a7006f9c2533"
   },
   "seen_entries": {
@@ -49,6 +49,7 @@
     "https://www.anthropic.com/news/ai-for-science-program": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/alberta-government-claude-cybersecurity": "2026-07-06T20:46:29.651100+00:00",
     "https://www.anthropic.com/news/an-ai-policy-tool-for-today-ambitiously-invest-in-nist": "2026-05-12T17:17:13.057300+00:00",
+    "https://www.anthropic.com/news/an-update-on-independent-evaluators": "2026-10-15T20:42:45.658188+00:00",
     "https://www.anthropic.com/news/announcing-our-updated-responsible-scaling-policy": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-accenture-partnership": "2026-05-12T17:17:13.057300+00:00",
     "https://www.anthropic.com/news/anthropic-achieves-iso-42001-certification-for-responsible-ai": "2026-05-12T17:17:13.057300+00:00",
@@ -623,6 +624,7 @@
     "tag:github.com,2008:Repository/937253475/v2.1.295": "2026-10-08T20:21:41.867574+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.296": "2026-10-09T19:54:16.656796+00:00",
     "tag:github.com,2008:Repository/937253475/v2.1.299": "2026-10-14T08:11:43.249029+00:00",
-    "tag:github.com,2008:Repository/937253475/v2.1.300": "2026-10-14T19:03:28.543773+00:00"
+    "tag:github.com,2008:Repository/937253475/v2.1.300": "2026-10-14T19:03:28.543773+00:00",
+    "tag:github.com,2008:Repository/937253475/v2.1.301": "2026-10-15T20:42:45.658188+00:00"
   }
 }
